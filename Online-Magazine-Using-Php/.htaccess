@@ -1,0 +1,23 @@
+RewriteEngine On    # Turn on the rewriting engine 
+
+RewriteRule    ^admin/?$    admin/index.php    [NC,L]   
+RewriteRule    ^install/?$    install/index.php    [NC,L]   
+
+RewriteRule    ^newsimages/?$    newsimages/    [NC,L]   
+RewriteRule    ^addimages/?$    addimages/    [NC,L]   
+RewriteRule    ^backup/?$    backup/    [NC,L]   
+
+RewriteRule    ^article/([([0-9]+)/(.*)$    detailsnews.php?newsid=$1    [NC,L]
+RewriteRule    ^article/([([0-9]+)/?$    detailsnews.php?newsid=$1    [NC,L]
+
+RewriteRule    ^archive/([A-Za-z0-9-]+)/?$    archive.php?date=$1    [NC,L]
+RewriteRule    ^search/?$    search.php    [NC,L] 
+
+RewriteRule    ^subcat/([A-Za-z0-9-]+)/?$    subcat.php?cnm=$1    [NC,L] 
+RewriteRule    ^subcat/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    subcat.php?cnm=$1&page=$2    [NC,L] 
+
+RewriteRule    ^([A-Za-z0-9-]+)/?$    cat.php?cnm=$1    [NC,L] 
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    cat.php?cnm=$1&page=$2    [NC,L] 
+
+
+
